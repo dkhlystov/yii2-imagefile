@@ -1,0 +1,21 @@
+{
+    "name": "dkhlystov/yii2-imagefile",
+    "description": "Image file helper for Yii 2 framework",
+    "type": "yii2-extension",
+    "keywords": ["yii2","image","file"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Dmitry Khlystov",
+            "email": "dkhlystov@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+    },
+    "autoload": {
+        "psr-4": {
+            "helpers\\": ""
+        }
+    }
+}
