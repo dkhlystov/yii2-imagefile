@@ -40,9 +40,10 @@ class ImageFile
 
 	/**
 	 * @param string $filename Name of the image file.
+	 * @param array $options
 	 * @return void
 	 */
-	public function __construct($filename, $options)
+	public function __construct($filename, $options = [])
 	{
 		$this->_filename = $filename;
 
@@ -55,6 +56,17 @@ class ImageFile
 	{
 		if (is_resource($this->_image))
 			imagedestroy($this->_image);
+	}
+
+	/**
+	 * Returns the index of the color of the pixel at the specified location in the image specified by image.
+	 * @param int $x 
+	 * @param int $y 
+	 * @return string
+	 */
+	public function colorAt($x, $y)
+	{
+		return imagecolorat($this->_image, $x, $y);
 	}
 
 	/**
